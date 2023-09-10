@@ -1,0 +1,38 @@
+name: module_external_dependencies
+description: A new Flutter project.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.6 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_modular: ^6.3.1
+  flutter_triple: ^3.0.0
+  flutter_svg: ^2.0.7
+  lottie: ^2.0.0
+  modal_progress_hud_nsn: ^0.4.0
+  google_nav_bar: ^5.0.6
+  objectbox: ^2.2.1
+  objectbox_flutter_libs: ^2.2.1
+  either_dart: ^1.0.0
+  flutter_rating_bar: ^4.0.1
+  animated_snack_bar: ^0.3.1
+  animated_rating_bar: ^0.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+
+  module:
+    androidX: true
+    androidPackage: com.example.module_external_dependencies
+    iosBundleIdentifier: com.example.moduleExternalDependencies
