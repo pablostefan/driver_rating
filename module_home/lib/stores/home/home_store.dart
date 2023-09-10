@@ -23,10 +23,8 @@ class HomeStore extends Store<HomeViewModel> {
 
   void getDrivers() async {
     setLoading(true);
-    // var result = await driversRepository.getAllDrivers();
-    // result.fold(setError, (drivers) => update(state.copyWith(drivers: drivers)));
-
-    await driversRepository.removeAllDrivers();
+    var result = await driversRepository.getAllDrivers();
+    result.fold(setError, (drivers) => update(state.copyWith(drivers: drivers)));
     setLoading(false);
   }
 }
