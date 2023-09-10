@@ -52,7 +52,7 @@ Para saber mais e começar a usar o flutter_modular, [clique aqui](https://githu
 <p align="justify">Para instalar o aplicativo, basta seguir os seguintes passos:</p>
 
 ### Baixar apk
-Para baixar a apk, [clique aqui](https://github.com/insert-link-aqui).
+Para baixar a apk, [clique aqui](https://drive.google.com/file/d/1zZneDKxF38fHSdYR5hzNQojWc104UCxY/view?usp=sharing).
 
 ### Instalar apk
 Para instalar a apk, basta seguir os seguintes passos:
