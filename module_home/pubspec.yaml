@@ -24,6 +24,9 @@ dependencies:
   module_assets:
     path: '../module_assets'
 
+  base_app:
+    path: '../base_app'
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

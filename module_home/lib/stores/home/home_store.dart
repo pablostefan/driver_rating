@@ -12,7 +12,7 @@ class HomeStore extends Store<HomeViewModel> {
   @override
   void initStore() {
     super.initStore();
-    _getHomeData();
+    getDrivers();
   }
 
   void onTabChange(int index) {
@@ -21,17 +21,10 @@ class HomeStore extends Store<HomeViewModel> {
 
   void onPageChange(int index) => update(state.copyWith(selectedIndex: index));
 
-  void _getHomeData() async {
+  void getDrivers() async {
     setLoading(true);
-    await _putDefaultDrivers();
-    await getDrivers();
-    setLoading(false);
-  }
-
-  Future<void> _putDefaultDrivers() async => await driversRepository.putDefaultDrivers();
-
-  Future<void> getDrivers() async {
     var result = await driversRepository.getAllDrivers();
     result.fold(setError, (drivers) => update(state.copyWith(drivers: drivers)));
+    setLoading(false);
   }
 }
