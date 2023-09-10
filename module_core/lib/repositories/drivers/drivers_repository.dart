@@ -16,9 +16,7 @@ class DriversRepository extends IDriversRepository {
   Future<Either<DriverRatingError, List<Driver>>> getAllDrivers() {
     return executeWithCatch(() async {
       Box<Driver> driverBox = await objectBox.driverBox;
-      List<Driver> drivers = await driverBox.getAllAsync();
-      if (drivers.isEmpty) await putDefaultDrivers();
-      return drivers.isEmpty ? DefaultDriversModel.defaultDrivers : drivers;
+      return await driverBox.getAllAsync();
     });
   }
 
@@ -54,9 +52,13 @@ class DriversRepository extends IDriversRepository {
     });
   }
 
+  @override
   Future<Either<DriverRatingError, void>> putDefaultDrivers() {
     return executeWithCatch(() async {
-      DefaultDriversModel.defaultDriversWithRatings.forEach((driver) async => await putDriver(driver));
+      Box<Driver> driverBox = await objectBox.driverBox;
+      if (driverBox.isEmpty()) {
+        DefaultDriversModel.defaultDriversWithRatings.forEach((driver) async => await putDriver(driver));
+      }
     });
   }
 }

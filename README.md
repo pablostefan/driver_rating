@@ -47,5 +47,22 @@ Para saber mais e começar a usar o flutter_modular, [clique aqui](https://githu
 
 ---
 
+## Instalação
+
+<p align="justify">Para instalar o aplicativo, basta seguir os seguintes passos:</p>
+
+### Baixar apk
+Para baixar a apk, [clique aqui](https://github.com/insert-link-aqui).
+
+### Instalar apk
+Para instalar a apk, basta seguir os seguintes passos:
+1. Acesse as Configurações;
+2. Aplicativos e notificações e procure Avançado;
+3. Em Acesso especial de apps, toque em Instalar apps desconhecidos.
+4. Escolha o navegador que você costuma baixar arquivos APK;
+5. Ative a opção Permitir desta fonte.
+6. Abra o navegador e baixe o APK;
+
+
 
 

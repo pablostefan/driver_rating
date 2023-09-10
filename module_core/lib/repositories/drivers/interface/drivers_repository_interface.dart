@@ -12,4 +12,6 @@ abstract class IDriversRepository {
   Future<Either<DriverRatingError, void>> update(Driver driver);
 
   Future<Either<DriverRatingError, void>> removeAllDrivers();
+
+  Future<Either<DriverRatingError, void>> putDefaultDrivers();
 }
